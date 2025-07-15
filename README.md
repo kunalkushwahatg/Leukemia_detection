@@ -1,10 +1,24 @@
 # Leukemia Detection Using CNN
 
-This repository contains an AI-powered solution for the early detection of Leukemia from blood smear images. Leveraging a Convolutional Neural Network (CNN), the model classifies input images as either Leukemia-positive or normal, aiming to assist healthcare professionals in rapid preliminary diagnostics.
+This repository contains an AI-powered solution for the early detection of Leukemia from blood smear images. Leveraging a Convolutional Neural Network (CNN), the model classifies input images as either Leukemia-positive or normal, aiming to assist healthcare professionals in rapid preliminary diagnostics. It is the part of hackathon IEEE Medhamanthan 2025 organized by IEEE kolkata section.
+
+## Table of Contents
+- [My contribution](#my-contribution)
+- [Demo Video](#demo-video)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+
+
+## My contribution
+- Optimization of the custom cvt model for better accuracy and performance.
+- Development of complete backend using fastapi server for raspberry pi deployment.
+- Model testing and inference code development.
 
 ## Demo Video
 
-Demo : https://youtu.be/KLpIaKE_rCw
+[![Watch the demo video](https://img.youtube.com/vi/KLpIaKE_rCw/hqdefault.jpg)](https://www.youtube.com/watch?v=KLpIaKE_rCw)
+
 
 In this demo, the application is running on raspberry pi 5, ubuntu 22.04 server os. We are accessing the application through the device's ip in the local network in which the device is deployed. 
 ## Features
@@ -27,7 +41,7 @@ In this demo, the application is running on raspberry pi 5, ubuntu 22.04 server 
 To run it locally on your computer:
 
 ```bash
-git clone https://github.com/HrushikeshAnandSarangi/Leukemia_model
+git clone https://github.com/kunalkushwahatg/Leukemia_detection
 cd Leukemia_model
 docker build -t medhamanthan-app .
 docker run -d --name medhamanthan-app -p 3000:3000 -p 8000:8000 medhamanthan-app
