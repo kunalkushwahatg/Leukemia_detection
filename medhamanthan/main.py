@@ -1,5 +1,6 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from predict import LeukemiaPredictor
 import os
 
@@ -7,6 +8,15 @@ app = FastAPI(
     title="Leukemia Classification API",
     description="API for classifying Leukemia in microscopic images using a custom CvT model.",
     version="1.0.0"
+)
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
 )
 
 # Global variable to hold the predictor instance

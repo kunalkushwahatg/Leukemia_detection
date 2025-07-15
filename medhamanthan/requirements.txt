@@ -6,3 +6,4 @@ Pillow
 numpy
 pandas
 imageio
+python-multipart
